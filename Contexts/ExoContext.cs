@@ -20,7 +20,7 @@ if(!optionsBuilder.IsConfigured)
 {
 // Essa string de conexão depende da SUA máquina.
 optionsBuilder.UseSqlServer("User ID=sa;Password=Poli2705;Server=localhost;Database=ExoApi;"
-+ "Trusted_Connection=False;");
++ "Database=ExoApi;Trusted_Connection=True;");
 // Exemplo 1 de string de conexão:
 // User ID=sa;Password=Poli2705;Server=localhost;Database=ExoApi;
 // + Trusted_Connection=False;
@@ -29,5 +29,6 @@ optionsBuilder.UseSqlServer("User ID=sa;Password=Poli2705;Server=localhost;Datab
 }
 }
 public DbSet<Projeto> Projetos { get; set; }
+public DbSet<Usuario> Usuarios { get; set; }
 }
 }
